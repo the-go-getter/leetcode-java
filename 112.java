@@ -20,7 +20,7 @@ class TreeNode {
 }
 
 class Solution {
-  public boolean hasPathSum(TreeNode root, int targetSum) {
+  public static boolean hasPathSum(TreeNode root, int targetSum) {
     if (root == null) {
       return false;
     } else if (root.val == targetSum && root.left == null && root.right == null) {
@@ -29,5 +29,9 @@ class Solution {
       return hasPathSum(root.left, targetSum - root.val) ||
               hasPathSum(root.right, targetSum - root.val);
     }
+  }
+
+  public static void main(String[] args) {
+    System.out.println();
   }
 }
