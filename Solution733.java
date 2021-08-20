@@ -1,5 +1,8 @@
 public class Solution733 {
   public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
+    if (image[sr][sc] == newColor) {
+      return image;
+    }
     int oldColor = image[sr][sc];
     fillThis(image, sr, sc, oldColor, newColor);
     return image;
@@ -20,8 +23,8 @@ public class Solution733 {
   public static void main(String[] args) {
     Solution733 mySolution = new Solution733();
     int[][] output = mySolution.floodFill(new int[][]{{1, 1, 1}, {1, 1, 0}, {1, 0, 1}}, 1, 1, 2);
-    for (int[] row: output){
-      for (int value: row){
+    for (int[] row : output) {
+      for (int value : row) {
         System.out.print(value);
       }
       System.out.print("\n");
