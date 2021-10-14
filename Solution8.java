@@ -1,4 +1,4 @@
-class Solution {
+class Solution8 {
   public int myAtoi(String s) {
     int i = 0;
 
